@@ -23,7 +23,7 @@ export interface RegisterRequest{
 }
 
 export interface RegisterResponse{
-  messsage:string;
+  text:string;
 }
 
 export interface GetCurrentUserRequest {}

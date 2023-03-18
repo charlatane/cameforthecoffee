@@ -36,4 +36,6 @@ def signup(request):
         conn.commit()
         cur.close()
         conn.close()
-        return JsonResponse("success", safe=False)
+        # return JsonResponse("success", safe=False)
+        # return HttpResponse('<h2> form submitted.</h2>')
+        return JsonResponse({'text': 'Just rendering some JSON '})

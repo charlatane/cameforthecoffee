@@ -13,7 +13,7 @@ export const PrivateRouteComponent: React.FC<PrivateRouteComponentProps> = (
   const isAuthenticated = window.localStorage.getItem("jwt") !== null;
   const isRoleValid = window.localStorage.getItem("role") === props.role;
 
-  if (isAuthenticated && isRoleValid) {
+  if (!isAuthenticated && !isRoleValid) {
     return <Outlet />;
   } else {
     if (!toast.isActive("exists")) {
