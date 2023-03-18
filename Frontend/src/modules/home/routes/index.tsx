@@ -5,6 +5,7 @@ import { MissingPage } from "modules/core/pages/missing.page";
 import { LoginPage } from "modules/auth/pages/login.page";
 import { CreateCvPage } from "../pages/create-cv.page";
 import { YourWorkPage } from "../pages/your-work.page";
+import { CvTabComponent } from "../components/cv-tab.component";
 
 export const homeDashboard: IDashboard = {
   dashboardName: "home",
@@ -18,7 +19,7 @@ export const homeDashboard: IDashboard = {
     {
       name: "Create CV",
       link: "/home/create-cv",
-      content: <MissingPage />,
+      content: <CvTabComponent />,
     },
     {
       name: "Your Work",
@@ -41,7 +42,7 @@ export const homeDashboard: IDashboard = {
     {
       name: "Create CV",
       link: "/home/create-cv",
-      content: <MissingPage />,
+      content: <CvTabComponent />,
     },
     {
       name: "Your Work",
