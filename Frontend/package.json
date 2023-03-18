@@ -1,0 +1,68 @@
+{
+  "name": "binduhealth-opd-appointment-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/react": "^2.4.4",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/cabin": "^4.5.7",
+    "@fontsource/montserrat": "^4.5.12",
+    "@hookform/resolvers": "^2.9.3",
+    "@reduxjs/toolkit": "^1.8.2",
+    "@tanstack/react-table": "^8.5.11",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.0.1",
+    "@testing-library/user-event": "^14.1.0",
+    "@types/jest": "^25.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "chakra-react-select": "^4.1.2",
+    "exceljs": "^4.3.0",
+    "framer-motion": "^7.10.2",
+    "jspdf": "^2.5.1",
+    "jspdf-barcode": "^0.0.6",
+    "react": "^18.1.0",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^18.1.0",
+    "react-dropzone": "^14.2.1",
+    "react-hook-form": "^7.43.0",
+    "react-icons": "^4.4.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "^4.6.3",
+    "web-vitals": "^0.2.2",
+    "xlsx": "^0.18.5",
+    "zod": "^3.20.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "format": "prettier --config .prettierrc 'src/**/*.{ts,tsx}' --write"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-datepicker": "^4.8.0",
+    "@vitejs/plugin-react": "^3.0.0",
+    "prettier": "^2.7.1",
+    "vite": "^4.0.2",
+    "vite-plugin-svgr": "^2.4.0",
+    "vite-tsconfig-paths": "^4.0.3"
+  }
+}
