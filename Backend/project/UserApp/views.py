@@ -37,3 +37,36 @@ def signup(request):
         cur.close()
         conn.close()
         return JsonResponse("success", safe=False)
+
+@csrf_exempt
+def login(request):
+    if request.method=='POST':
+        # headers_token = request.META['HTTP_AUTHORIZATION'][7:]
+        # print(headers_token)
+        # user = Token.objects.get(key=headers_token).user
+        # print(user)
+        success = False
+        data = JSONParser().parse(request)
+        username = data['username']
+        password = data['password']
+
+        print(username,password)
+
+        conn = sqlite3.connect('db.sqlite3')
+        cur = conn.cursor()
+
+        query = ''' SELECT password FROM UserApp_usermodel WHERE username = '{var_user}' 
+        '''.format(var_user=username)
+        cur.execute(query)
+        fetch_password = cur.fetchone()[0]
+
+        if fetch_password == password:
+            success = True
+
+        else:
+            success = False
+
+        cur.close()
+        conn.close()
+        
+        return JsonResponse(success, safe=False)
