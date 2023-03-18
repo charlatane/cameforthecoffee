@@ -11,6 +11,17 @@ const authApi = api.injectEndpoints({
       })
     }),
 
+    register: builder.mutation<
+          ApiTypes.RegisterResponse,
+          ApiTypes.RegisterRequest
+        >({
+          query: ({ first_name,last_name,username,email,password }) => ({
+            url: `user/signup`,
+            method: `POST`,
+            body: { first_name,last_name,username,email,password }
+          })
+        }),
+        
     getCurrentUser: builder.query<
       ApiTypes.GetCurrentUserResponse,
       ApiTypes.GetCurrentUserRequest
@@ -23,4 +34,5 @@ const authApi = api.injectEndpoints({
   }),  overrideExisting: false
 });
 
-export const { useLoginMutation, useGetCurrentUserQuery } = authApi;
+
+export const { useLoginMutation,useRegisterMutation, useGetCurrentUserQuery } = authApi;
