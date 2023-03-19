@@ -17,6 +17,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { useRegisterMutation } from "../api";
+import { useNavigate } from "react-router-dom";
 interface RegisterFormComponentProps {}
 
 export const RegisterFormComponent: React.FC<RegisterFormComponentProps> = (
@@ -43,22 +44,23 @@ export const RegisterFormComponent: React.FC<RegisterFormComponentProps> = (
   const toast = useToast();
 
   useEffect(() => {
-    if (registerResult.isSuccess) {
-      toast({
-        title: "Registration Done",
-        status: "success",
-        isClosable: true,
-        position: "top",
-      });
+    // if (registerResult.isSuccess) {
+    //   toast({
+    //     title: "Registration Done",
+    //     status: "success",
+    //     isClosable: true,
+    //     position: "top",
+    //   });
 
-      setFirstName("");
-    } else
-      toast({
-        title: "Registration Notone",
-        status: "error",
-        isClosable: true,
-        position: "top",
-      });
+    setFirstName("");
+    setLastName("");
+    setUserName("");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
+    // } else {
+    //   setLastName("");
+    // }
   }, [registerResult]);
 
   const handleRegister = () => {
@@ -71,6 +73,11 @@ export const RegisterFormComponent: React.FC<RegisterFormComponentProps> = (
     };
     registerRequest(reg);
   };
+
+  const navigateLogin = () => {
+    <Link href="/login">Login</Link>;
+  };
+
   return (
     <Stack>
       <Center>
@@ -145,18 +152,22 @@ export const RegisterFormComponent: React.FC<RegisterFormComponentProps> = (
               }}
             />
           </FormControl>
-          <Button colorScheme={"blue"} variant={"solid"} type="submit">
-            Register
-          </Button>
+          <Link href="/login">
+            <Button
+              width="100%"
+              colorScheme={"blue"}
+              variant={"solid"}
+              type="submit"
+              onClick={handleRegister}
+            >
+              Register
+            </Button>
+          </Link>
 
           <Divider />
           <Text>
             Already have an account?{" "}
-            <Link
-              href="/login"
-              color="blue.500"
-              onClick={() => handleRegister()}
-            >
+            <Link href="/login" color="blue.500">
               Login
             </Link>
           </Text>

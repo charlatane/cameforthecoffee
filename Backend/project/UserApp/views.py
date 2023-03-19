@@ -36,6 +36,7 @@ def signup(request):
         conn.commit()
         cur.close()
         conn.close()
+<<<<<<< HEAD
         return JsonResponse("success", safe=False)
 
 @csrf_exempt
@@ -70,3 +71,8 @@ def login(request):
         conn.close()
         
         return JsonResponse(success, safe=False)
+=======
+        # return JsonResponse("success", safe=False)
+        # return HttpResponse('<h2> form submitted.</h2>')
+        return JsonResponse({'text': 'Just rendering some JSON '})
+>>>>>>> 76bf2a580ce2726bc26794a045b8995417f39155

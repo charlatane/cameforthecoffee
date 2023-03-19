@@ -1,10 +1,10 @@
 export const dashboardTheme = {
   animation: {
-    transition: ".3s ease"
+    transition: ".3s ease",
   },
 
   topBar: {
-    backgroundColor: "white"
+    backgroundColor: "white",
   },
 
   sidebar: {
@@ -13,36 +13,36 @@ export const dashboardTheme = {
     fontColor: "gray.200",
     borderColor: "gray.300",
     headerColor: "gray.100",
-    dividerColor: "gray.600"
+    dividerColor: "gray.600",
   },
 
   sidebarLink: {
     base: {
       backgroundColor: "gray.700",
-      textColor: "gray.200"
+      textColor: "gray.200",
     },
     hovered: {
       backgroundColor: "gray.800",
-      textColor: "gray.200"
+      textColor: "gray.200",
     },
     selected: {
       backgroundColor: "gray.900",
-      textColor: "white"
-    }
+      textColor: "white",
+    },
   },
 
   page: {
     backgroundColor: "#2D3748",
-    textColor: "white"
+    textColor: "white",
     // backgroundColor: "#032059"
   },
 
   tab: {
     hovered: {
-      backgroundColor: "gray.700"
+      backgroundColor: "gray.700",
     },
     selected: {
-      backgroundColor: "gray.600"
-    }
-  }
+      backgroundColor: "gray.600",
+    },
+  },
 };
